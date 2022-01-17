@@ -12,6 +12,7 @@ import InputBase from "@material-ui/core/InputBase";
 import Toolbar from "@material-ui/core/Toolbar";
 // @material-ui/icons components
 import Clear from "@material-ui/icons/Clear";
+
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import ZoomIn from "@material-ui/icons/ZoomIn";
@@ -19,7 +20,6 @@ import ZoomIn from "@material-ui/icons/ZoomIn";
 // core components
 import AppsDropdownAlternative from "components/Dropdowns/AppsDropdownAlternative.js";
 import NotificationsDropdownAlternative from "components/Dropdowns/NotificationsDropdownAlternative.js";
-import UserDropdownAlternative from "components/Dropdowns/UserDropdownAlternative.js";
 
 import componentStyles from "assets/theme/components/navbars/admin-navbar-alternative.js";
 
@@ -109,9 +109,7 @@ export default function AdminNavbarAlternative({ openSidebarResponsive }) {
                 className={clsx(classes.marginLeftAuto, {
                   [classes.displayNone]: showSearch,
                 })}
-              >
-                <UserDropdownAlternative />
-              </Box>
+              ></Box>
             </Box>
           </Container>
         </Toolbar>

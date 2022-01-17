@@ -15,9 +15,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ZoomIn from "@material-ui/icons/ZoomIn";
 
 // core components
-import AppsDropdown from "components/Dropdowns/AppsDropdown.js";
-import NotificationsDropdown from "components/Dropdowns/NotificationsDropdown.js";
-import UserDropdown from "components/Dropdowns/UserDropdown.js";
 
 import componentStyles from "assets/theme/components/navbars/admin-navbar.js";
 
@@ -100,8 +97,6 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                     />
                   </IconButton>
                 </Hidden>
-                <NotificationsDropdown />
-                <AppsDropdown />
               </Box>
               <Box
                 display="flex"
@@ -110,9 +105,7 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                 className={clsx(classes.marginLeftAuto, {
                   [classes.displayNone]: showSearch,
                 })}
-              >
-                <UserDropdown />
-              </Box>
+              ></Box>
             </Box>
           </Container>
         </Toolbar>

@@ -16,7 +16,7 @@ import componentStyles from "assets/theme/components/cards/cards/card-header-act
 
 const useStyles = makeStyles(componentStyles);
 
-function CardHeaderAction() {
+export default function CardHeaderAction({ content }) {
   const classes = useStyles();
   return (
     <>
@@ -35,10 +35,10 @@ function CardHeaderAction() {
                   variant="h3"
                   marginBottom="0!important"
                 >
-                  Card title
+                  {content.title}
                 </Box>
               </Grid>
-              <Grid item xs="auto">
+              {/* <Grid item xs="auto">
                 <Box justifyContent="flex-end" display="flex" flexWrap="wrap">
                   <Button
                     variant="contained"
@@ -48,7 +48,7 @@ function CardHeaderAction() {
                     Action
                   </Button>
                 </Box>
-              </Grid>
+              </Grid> */}
             </Grid>
           }
           classes={{ root: classes.cardHeaderRoot }}
@@ -62,10 +62,7 @@ function CardHeaderAction() {
             fontSize="1rem"
             marginTop="0"
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-            non dolore est fuga nobis ipsum illum eligendi nemo iure repellat,
-            soluta, optio minus ut reiciendis voluptates enim impedit veritatis
-            officiis.
+            {content.details}
           </Box>
           <Button variant="contained" color="primary">
             Go somewhere
@@ -75,5 +72,3 @@ function CardHeaderAction() {
     </>
   );
 }
-
-export default CardHeaderAction;

@@ -26,7 +26,7 @@ const Footer = () => {
           alignItems="center"
           className={classes.justifyContentCenter}
         >
-          <div className={classes.copyrightWrapper}>
+          {/* <div className={classes.copyrightWrapper}>
             © {new Date().getFullYear()}{" "}
             <a
               className={classes.copyrightLink}
@@ -36,7 +36,7 @@ const Footer = () => {
             >
               Creative Tim
             </a>
-          </div>
+          </div> */}
         </Box>
 
         <Grid
@@ -61,9 +61,7 @@ const Footer = () => {
               classes={{
                 root: classes.listItemRoot,
               }}
-            >
-              Creative Tim
-            </ListItem>
+            ></ListItem>
 
             <ListItem
               component="a"
@@ -73,9 +71,7 @@ const Footer = () => {
               classes={{
                 root: classes.listItemRoot,
               }}
-            >
-              About Us
-            </ListItem>
+            ></ListItem>
 
             <ListItem
               component="a"
@@ -85,9 +81,7 @@ const Footer = () => {
               classes={{
                 root: classes.listItemRoot,
               }}
-            >
-              Blog
-            </ListItem>
+            ></ListItem>
 
             <ListItem
               component="a"
@@ -97,9 +91,7 @@ const Footer = () => {
               classes={{
                 root: classes.listItemRoot,
               }}
-            >
-              MIT License
-            </ListItem>
+            ></ListItem>
           </Box>
         </Grid>
       </Grid>
