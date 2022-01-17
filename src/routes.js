@@ -18,16 +18,16 @@ import Elements from "views/admin/Forms/Elements.js";
 import Components from "views/admin/Forms/Components.js";
 import Validation from "views/admin/Forms/Validation.js";
 // // // // // admin tables
-import Tables from "views/admin/Tables/Tables.js";
+/* import Tables from "views/admin/Tables/Tables.js";
 import Sortable from "views/admin/Tables/Sortable.js";
 import ReactBSTable from "views/admin/Tables/ReactBSTable.js";
 // // // // // admin maps
 import Google from "views/admin/Maps/Google.js";
-import Vector from "views/admin/Maps/Vector.js";
+import Vector from "views/admin/Maps/Vector.js"; */
 // // // // // admin rest
-import Widgets from "views/admin/Widgets.js";
+/* import Widgets from "views/admin/Widgets.js";
 import Charts from "views/admin/Charts.js";
-import Calendar from "views/admin/Calendar.js";
+import Calendar from "views/admin/Calendar.js"; */
 
 // auth pages
 import Lock from "views/auth/Lock.js";
@@ -35,23 +35,22 @@ import Login from "views/auth/Login.js";
 import Pricing from "views/auth/Pricing.js";
 import Register from "views/auth/Register.js";
 // @material-ui/icons components
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import Dns from "@material-ui/icons/Dns";
-import Event from "@material-ui/icons/Event";
-import FlashOn from "@material-ui/icons/FlashOn";
+/* import BubbleChart from "@material-ui/icons/BubbleChart";
+ */ import Dns from "@material-ui/icons/Dns";
+/* import Event from "@material-ui/icons/Event";
+/* import Map from "@material-ui/icons/Map";
+import Palette from "@material-ui/icons/Palette"; */
 import House from "@material-ui/icons/House";
 import ListAlt from "@material-ui/icons/ListAlt";
-import Map from "@material-ui/icons/Map";
-import Palette from "@material-ui/icons/Palette";
+
 import PermMedia from "@material-ui/icons/PermMedia";
-import PieChart from "@material-ui/icons/PieChart";
-import Toc from "@material-ui/icons/Toc";
-import WidgetsIcon from "@material-ui/icons/Widgets";
+/* import PieChart from "@material-ui/icons/PieChart";
+//* import WidgetsIcon from "@material-ui/icons/Widgets"; */
 
 var routes = [
   {
     collapse: true,
-    name: "Dashboards",
+    name: "Dashboard",
     icon: House,
     iconColor: "Primary",
     state: "dashboardsCollapse",
@@ -74,7 +73,7 @@ var routes = [
   },
   {
     collapse: true,
-    name: "Examples",
+    name: "Microsoft",
     icon: PermMedia,
     iconColor: "Warning",
     state: "examplesCollapse",
@@ -125,7 +124,7 @@ var routes = [
   },
   {
     collapse: true,
-    name: "Components",
+    name: "Apple",
     icon: Dns,
     iconColor: "Info",
     state: "componentsCollapse",
@@ -206,7 +205,7 @@ var routes = [
   },
   {
     collapse: true,
-    name: "Forms",
+    name: "Facebook",
     icon: ListAlt,
     iconColor: "ErrorLight",
     state: "formsCollapse",
@@ -234,7 +233,7 @@ var routes = [
       },
     ],
   },
-  {
+  /* {
     collapse: true,
     name: "Tables",
     icon: Toc,
@@ -286,8 +285,8 @@ var routes = [
         layout: "/admin",
       },
     ],
-  },
-  {
+  } */
+  /* {
     path: "/widgets",
     name: "Widgets",
     icon: WidgetsIcon,
@@ -310,8 +309,8 @@ var routes = [
     iconColor: "Error",
     component: Calendar,
     layout: "/admin",
-  },
-  {
+  }, */
+  /*  {
     divider: true,
   },
   {
@@ -336,6 +335,7 @@ var routes = [
     href: "https://www.creative-tim.com/learning-lab/material-ui/google-maps/argon-dashboard?ref=admui-admin-sidebar",
     name: "Plugins",
     icon: BubbleChart,
-  },
+  }, */
+  ,
 ];
 export default routes;

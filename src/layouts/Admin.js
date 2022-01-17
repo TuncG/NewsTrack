@@ -21,9 +21,8 @@ const useStyles = makeStyles(componentStyles);
 const Admin = () => {
   const classes = useStyles();
   const location = useLocation();
-  const [sidebarOpenResponsive, setSidebarOpenResponsive] = React.useState(
-    false
-  );
+  const [sidebarOpenResponsive, setSidebarOpenResponsive] =
+    React.useState(false);
 
   React.useEffect(() => {
     document.documentElement.scrollTop = 0;

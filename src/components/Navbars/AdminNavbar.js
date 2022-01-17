@@ -9,12 +9,9 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-import InputBase from "@material-ui/core/InputBase";
 import Toolbar from "@material-ui/core/Toolbar";
 // @material-ui/icons components
-import Clear from "@material-ui/icons/Clear";
 import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
 import ZoomIn from "@material-ui/icons/ZoomIn";
 
 // core components
@@ -51,7 +48,7 @@ export default function AdminNavbar({ openSidebarResponsive }) {
               marginTop="1rem"
               marginBottom="1rem"
             >
-              <Box
+              {/* <Box
                 display="flex"
                 alignItems="center"
                 width="auto"
@@ -72,8 +69,8 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                     className={classes.searchClose}
                     onClick={() => setShowSearch(false)}
                   />
-                </Hidden>
-              </Box>
+                </Hidden> 
+              </Box> */}
               <Box
                 display="flex"
                 justifyContent="center"

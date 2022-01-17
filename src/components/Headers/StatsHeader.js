@@ -16,7 +16,6 @@ import ArrowDownward from "@material-ui/icons/ArrowDownward";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import EmojiEvents from "@material-ui/icons/EmojiEvents";
 import GroupAdd from "@material-ui/icons/GroupAdd";
-import Home from "@material-ui/icons/Home";
 import InsertChartOutlined from "@material-ui/icons/InsertChartOutlined";
 import PieChart from "@material-ui/icons/PieChart";
 
@@ -58,7 +57,7 @@ const StatsHeader = ({ section, subsection }) => {
                 {section}
               </Typography>
               <Breadcrumbs
-                separator="-"
+                separator=""
                 aria-label="breadcrumb"
                 classes={{
                   root: classes.breadcrumbRoot,
@@ -71,14 +70,7 @@ const StatsHeader = ({ section, subsection }) => {
                   color="inherit"
                   href="/"
                   onClick={(e) => e.preventDefault()}
-                >
-                  <Box
-                    component={Home}
-                    width="1.25rem!important"
-                    height="1.25rem!important"
-                    position="relative"
-                  />
-                </Link>
+                ></Link>
                 <Link
                   color="inherit"
                   href="/getting-started/installation/"

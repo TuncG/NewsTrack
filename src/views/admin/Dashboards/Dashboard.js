@@ -8,8 +8,7 @@ import Grid from "@material-ui/core/Grid";
 
 // core components
 import StatsHeader from "components/Headers/StatsHeader.js";
-import CardSalesValue from "components/Cards/Dashboard/CardSalesValue.js";
-import CardTotalOrders from "components/Cards/Charts/CardTotalOrders.js";
+
 import CardTeamMembers from "components/Cards/Dashboard/CardTeamMembers.js";
 import CardToDoList from "components/Cards/Dashboard/CardToDoList.js";
 import CardProgressTrack from "components/Cards/Dashboard/CardProgressTrack.js";
@@ -30,7 +29,7 @@ function Dashboard() {
   const classes = { ...useStyles(), ...useStylesCardDeck() };
   return (
     <>
-      <StatsHeader section="Default" subsection="Dashboards" />
+      <StatsHeader />
       {/* Page content */}
       <Container
         maxWidth={false}
@@ -38,14 +37,6 @@ function Dashboard() {
         marginTop="-6rem"
         classes={{ root: classes.containerRoot }}
       >
-        <Grid container>
-          <Grid item xs={12} xl={8} classes={{ root: classes.gridItemRoot }}>
-            <CardSalesValue />
-          </Grid>
-          <Grid item xs={12} xl={4}>
-            <CardTotalOrders />
-          </Grid>
-        </Grid>
         <Grid container>
           <Grid item xs={12} xl={4}>
             <CardTeamMembers />

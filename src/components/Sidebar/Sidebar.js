@@ -7,8 +7,8 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import Collapse from "@material-ui/core/Collapse";
-import Divider from "@material-ui/core/Divider";
+/* import Collapse from "@material-ui/core/Collapse";
+ */ import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
@@ -18,8 +18,8 @@ import Typography from "@material-ui/core/Typography";
 // @material-ui/icons components
 import MenuIcon from "@material-ui/icons/Menu";
 import MenuOpen from "@material-ui/icons/MenuOpen";
-import NavigateNext from "@material-ui/icons/NavigateNext";
-
+/* import NavigateNext from "@material-ui/icons/NavigateNext";
+ */
 // core components
 import componentStyles from "assets/theme/components/sidebar.js";
 
@@ -179,7 +179,7 @@ export default function Sidebar({
               {textContent}
               {miniActive ? null : (
                 <Box
-                  component={NavigateNext}
+                  /* component={NavigateNext} */
                   marginLeft="auto"
                   width="1rem!important"
                   height="1rem!important"
@@ -189,7 +189,7 @@ export default function Sidebar({
                 />
               )}
             </ListItem>
-            <Collapse
+            {/* <Collapse     Uncomment to allow for sublinks
               in={state[prop.state]}
               unmountOnExit
               className={classes.collapseRoot}
@@ -197,7 +197,7 @@ export default function Sidebar({
               <List classes={{ root: classes.listRootCollapse }}>
                 {createLinks(prop.views)}
               </List>
-            </Collapse>
+            </Collapse> */}
           </React.Fragment>
         );
       } else if (prop.href) {
@@ -250,16 +250,7 @@ export default function Sidebar({
   let logoImage = (
     <img alt={logo.imgAlt} className={classes.logoClasses} src={logo.imgSrc} />
   );
-  let logoObject =
-    logo && logo.innerLink ? (
-      <Link to={logo.innerLink} className={classes.logoLinkClasses}>
-        {logoImage}
-      </Link>
-    ) : logo && logo.outterLink ? (
-      <a href={logo.outterLink} className={classes.logoLinkClasses}>
-        {logoImage}
-      </a>
-    ) : null;
+  let logoObject = <Typography variant="h1"> NewsTrack</Typography>;
 
   const desktopObject = (
     <>
