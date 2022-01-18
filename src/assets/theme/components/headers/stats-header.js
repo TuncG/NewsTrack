@@ -3,6 +3,8 @@ const componentStyles = (theme) => ({
     position: "relative",
     backgroundColor: theme.palette.info.main,
     paddingBottom: "8rem",
+    marginLeft: "0",
+    marginRight: "0",
   },
   containerRoot: {
     [theme.breakpoints.up("md")]: {

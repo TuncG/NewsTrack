@@ -9,19 +9,24 @@ import Grid from "@material-ui/core/Grid";
 
 // core components
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
+import AdminNavbarAlternative from "components/Navbars/AdminNavbarAlternative.js";
 import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 
 import componentStyles from "assets/theme/layouts/admin.js";
+import CardHeaderAction from "components/Cards/Cards/CardHeaderAction";
 
 import CardSalesValueAlternative from "components/Cards/Alternative/CardSalesValueAlternative.js";
 import CardSalesValueDots from "components/Cards/Charts/CardSalesValueDots.js";
-import Dashboard from "views/admin/Dashboards/Dashboard";
 
 const useStyles = makeStyles(componentStyles);
-
+const content = {
+  title: "MICROSOFT PAGE",
+  details:
+    "At NewsTrack we keep track of important information regarding the big tech compagnies, check out our links at the sidebar for more info.",
+};
 const Admin = () => {
   const classes = useStyles();
   const location = useLocation();
@@ -67,10 +72,15 @@ const Admin = () => {
         />
 
         <Box position="relative" flex="1" className={classes.mainContent}>
-          <AdminNavbar
-            openSidebarResponsive={() => setSidebarOpenResponsive(true)}
-          />
-          <Dashboard />
+          {location.pathname === "/admin/alternative-dashboard" ? (
+            <AdminNavbarAlternative
+              openSidebarResponsive={() => setSidebarOpenResponsive(true)}
+            />
+          ) : (
+            <AdminNavbar
+              openSidebarResponsive={() => setSidebarOpenResponsive(true)}
+            />
+          )}
 
           <Switch>
             {getRoutes(routes)}
@@ -82,10 +92,16 @@ const Admin = () => {
             component={Box}
             classes={{ root: classes.containerRoot }}
           >
+            {/* CARD HERE */}
+            <Container>
+              {" "}
+              <CardHeaderAction content={content} />
+            </Container>
+
             <Container
               maxWidth={false}
               component={Box}
-              marginTop="3rem"
+              marginTop="5rem"
               classes={{ root: classes.containerRoot }}
             >
               <Grid container>

@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
  */ // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-/* import Button from "@material-ui/core/Button";
+/* import Box from "@material-ui/core/Box";
+ */ /* import Button from "@material-ui/core/Button";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs"; */
-import Container from "@material-ui/core/Container";
-/* import Grid from "@material-ui/core/Grid";
+/* import Container from "@material-ui/core/Container";
+ */ /* import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography"; */
 // @material-ui/icons components
@@ -31,13 +31,7 @@ const StatsHeader = ({ section, subsection }) => {
   const theme = useTheme();
   return (
     <>
-      <div className={classes.header}>
-        <Container
-          maxWidth={false}
-          component={Box}
-          classes={{ root: classes.containerRoot }}
-        ></Container>
-      </div>
+      <div className={classes.header}></div>
     </>
   );
 };

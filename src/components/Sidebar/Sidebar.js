@@ -159,6 +159,7 @@ export default function Sidebar({
             st[item] = state[item];
           });
         }
+
         return (
           <React.Fragment key={key}>
             <ListItem
@@ -255,7 +256,7 @@ export default function Sidebar({
   const desktopObject = (
     <>
       <Box
-        padding={miniActive ? "0 0 1rem 0" : "0 1rem 1rem 1.5rem"}
+        padding={miniActive ? "0 0 1rem 0" : "0 1rem 0 1.5rem"}
         display="flex"
         justifyContent={miniActive ? "center" : "space-between"}
         alignItems="center"
@@ -269,6 +270,7 @@ export default function Sidebar({
           />
         </IconButton>
       </Box>
+
       <List classes={{ root: classes.listRoot }}>{createLinks(routes)}</List>
     </>
   );

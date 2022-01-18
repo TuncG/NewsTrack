@@ -42,31 +42,8 @@ export default function AdminNavbar({ openSidebarResponsive }) {
               alignItems="center"
               width="100%"
               marginTop="1rem"
-              marginBottom="1rem"
+              marginBottom="4rem"
             >
-              {/* <Box
-                display="flex"
-                alignItems="center"
-                width="auto"
-                marginRight="1rem"
-                className={clsx(classes.searchBox, {
-                  [classes.searchBoxShow]: showSearch,
-                })}
-              >
-                 <SearchIcon className={classes.searchIcon} />
-                <InputBase
-                  placeholder="Search"
-                  classes={{
-                    input: classes.searchInput,
-                  }}
-                />
-                 <Hidden smUp implementation="css">
-                  <Clear
-                    className={classes.searchClose}
-                    onClick={() => setShowSearch(false)}
-                  />
-                </Hidden>  
-              </Box> */}
               <Box
                 display="flex"
                 justifyContent="center"
@@ -75,28 +52,7 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                 className={clsx(classes.marginLeftNone, {
                   [classes.displayNone]: showSearch,
                 })}
-              >
-                {/* <Hidden xlUp implementation="css">
-                  <IconButton onClick={openSidebarResponsive}>
-                    <Box
-                      component={MenuIcon}
-                      color={theme.palette.white.main}
-                      width="1.5rem!important"
-                      height="1.5rem!important"
-                    />
-                  </IconButton>
-                </Hidden> */}
-                {/*   <Hidden smUp implementation="css">
-                  <IconButton onClick={() => setShowSearch(true)}>
-                    <Box
-                      component={ZoomIn}
-                      color={theme.palette.white.main}
-                      width="1.5rem!important"
-                      height="1.5rem!important"
-                    />
-                  </IconButton>
-                </Hidden> */}
-              </Box>
+              ></Box>
               <Box
                 display="flex"
                 justifyContent="center"

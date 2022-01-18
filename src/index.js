@@ -20,7 +20,6 @@ import "assets/scss/argon-dashboard-pro-material-ui.scss?v1.0.0";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
-import Index from "views/Index.js";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
@@ -28,10 +27,9 @@ ReactDOM.render(
     <CssBaseline />
     <BrowserRouter>
       <Switch>
-        <Route path="/index" render={(props) => <Index {...props} />} />
         <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
         <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
-        <Redirect from="*" to="/index" />
+        <Redirect from="*" to="/admin" />
       </Switch>
     </BrowserRouter>
   </ThemeProvider>,

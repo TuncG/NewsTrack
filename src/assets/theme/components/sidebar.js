@@ -6,7 +6,7 @@ const componentStyles = (theme) => ({
     },
   },
   listRoot: {
-    marginTop: "2rem",
+    marginTop: "0",
     height: "100%",
   },
   listRootCollapse: {

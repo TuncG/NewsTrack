@@ -21,12 +21,18 @@ import CardSocialTraffic from "components/Cards/Dashboard/CardSocialTraffic.js";
 
 import componentStyles from "assets/theme/views/admin/dashboard.js";
 import componentStylesCardDeck from "assets/theme/components/cards/card-deck.js";
+import CardHeaderAction from "components/Cards/Cards/CardHeaderAction";
 
 const useStyles = makeStyles(componentStyles);
 const useStylesCardDeck = makeStyles(componentStylesCardDeck);
 
 function Dashboard() {
   const classes = { ...useStyles(), ...useStylesCardDeck() };
+  const content = {
+    title: "Welcome to NewsTrack!",
+    details:
+      "At NewsTrack we keep track of important information regarding the big tech compagnies, check out our links at the sidebar for more info.",
+  };
   return (
     <>
       <StatsHeader />
@@ -36,7 +42,9 @@ function Dashboard() {
         component={Box}
         marginTop="-6rem"
         classes={{ root: classes.containerRoot }}
-      ></Container>
+      >
+        <CardHeaderAction content={content}></CardHeaderAction>
+      </Container>
     </>
   );
 }
