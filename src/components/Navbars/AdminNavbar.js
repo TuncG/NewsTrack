@@ -7,16 +7,14 @@ import { useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
-import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
+
 import Toolbar from "@material-ui/core/Toolbar";
-// @material-ui/icons components
-import MenuIcon from "@material-ui/icons/Menu";
-import ZoomIn from "@material-ui/icons/ZoomIn";
 
 // core components
-
+/* import UserDropdown from "components/Dropdowns/UserDropdown.js";
+ */
 import componentStyles from "assets/theme/components/navbars/admin-navbar.js";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles(componentStyles);
 
@@ -24,6 +22,7 @@ export default function AdminNavbar({ openSidebarResponsive }) {
   const classes = useStyles();
   const theme = useTheme();
   const [showSearch, setShowSearch] = React.useState(false);
+
   return (
     <>
       <AppBar
@@ -54,19 +53,19 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                   [classes.searchBoxShow]: showSearch,
                 })}
               >
-                <SearchIcon className={classes.searchIcon} />
+                 <SearchIcon className={classes.searchIcon} />
                 <InputBase
                   placeholder="Search"
                   classes={{
                     input: classes.searchInput,
                   }}
                 />
-                <Hidden smUp implementation="css">
+                 <Hidden smUp implementation="css">
                   <Clear
                     className={classes.searchClose}
                     onClick={() => setShowSearch(false)}
                   />
-                </Hidden> 
+                </Hidden>  
               </Box> */}
               <Box
                 display="flex"
@@ -77,7 +76,7 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                   [classes.displayNone]: showSearch,
                 })}
               >
-                <Hidden xlUp implementation="css">
+                {/* <Hidden xlUp implementation="css">
                   <IconButton onClick={openSidebarResponsive}>
                     <Box
                       component={MenuIcon}
@@ -86,8 +85,8 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                       height="1.5rem!important"
                     />
                   </IconButton>
-                </Hidden>
-                <Hidden smUp implementation="css">
+                </Hidden> */}
+                {/*   <Hidden smUp implementation="css">
                   <IconButton onClick={() => setShowSearch(true)}>
                     <Box
                       component={ZoomIn}
@@ -96,7 +95,7 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                       height="1.5rem!important"
                     />
                   </IconButton>
-                </Hidden>
+                </Hidden> */}
               </Box>
               <Box
                 display="flex"
@@ -105,7 +104,13 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                 className={clsx(classes.marginLeftAuto, {
                   [classes.displayNone]: showSearch,
                 })}
-              ></Box>
+              >
+                {/*                 <UserDropdown />*/}
+                <Button variant="contained" color="default">
+                  {" "}
+                  Login{" "}
+                </Button>
+              </Box>
             </Box>
           </Container>
         </Toolbar>
