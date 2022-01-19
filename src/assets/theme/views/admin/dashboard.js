@@ -1,4 +1,8 @@
 const componentStyles = (theme) => ({
+  containerGraph: {
+    paddingLeft: "5rem",
+    paddingRight: "5rem",
+  },
   containerRoot: {
     [theme.breakpoints.up("md")]: {
       paddingLeft: "19rem",

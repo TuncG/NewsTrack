@@ -1,10 +1,6 @@
 // core components
 // admin pages
 // // // // // admin dashboards
-import Dashboard from "views/admin/Dashboards/Dashboard.js";
-import Widgets from "views/admin/Widgets.js";
-import WidgetsIcon from "@material-ui/icons/Widgets";
-
 // // // // // admin tables
 /* import Tables from "views/admin/Tables/Tables.js";
 import Sortable from "views/admin/Tables/Sortable.js";
@@ -29,8 +25,12 @@ import House from "@material-ui/icons/House";
 import ListAlt from "@material-ui/icons/ListAlt";
 
 import PermMedia from "@material-ui/icons/PermMedia";
-/* import PieChart from "@material-ui/icons/PieChart";
-//* import WidgetsIcon from "@material-ui/icons/Widgets"; */
+import Widgets from "views/admin/Widgets.js";
+import WidgetsIcon from "@material-ui/icons/Widgets";
+import Microsoft from "pages/Microsoft";
+import Apple from "pages/Apple";
+import Facebook from "pages/Facebook";
+import Dashboard from "pages/DashboardPage";
 
 var routes = [
   {
@@ -38,40 +38,36 @@ var routes = [
   },
 
   {
-    collapse: true,
+    path: "/pages/DashboardPage",
     name: "Dashboard",
     icon: House,
     iconColor: "Primary",
-    state: "dashboardsCollapse",
     component: Dashboard,
-    layout: "",
-    path: "/layouts/admin",
-    views: [],
+    layout: "/admin",
   },
   {
-    collapse: true,
+    path: "/pages/microsoft",
     name: "Microsoft",
     icon: PermMedia,
     iconColor: "Warning",
-    state: "examplesCollapse",
-    path: "/pages/microsoft",
-    views: [],
+    component: Microsoft,
+    layout: "/admin",
   },
   {
-    collapse: true,
+    path: "/pages/apple",
     name: "Apple",
     icon: Dns,
-    iconColor: "Info",
-    state: "componentsCollapse",
-    views: [],
+    iconColor: "Default",
+    component: Apple,
+    layout: "/admin",
   },
   {
-    collapse: true,
+    path: "facebook",
     name: "Facebook",
     icon: ListAlt,
     iconColor: "ErrorLight",
-    state: "formsCollapse",
-    views: [],
+    component: Facebook,
+    layout: "/admin",
   },
   {
     path: "/widgets",
@@ -184,6 +180,5 @@ var routes = [
     name: "Plugins",
     icon: BubbleChart,
   }, */
-  ,
 ];
 export default routes;
