@@ -62,7 +62,7 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "facebook",
+    path: "/pages/Facebook",
     name: "Facebook",
     icon: ListAlt,
     iconColor: "ErrorLight",

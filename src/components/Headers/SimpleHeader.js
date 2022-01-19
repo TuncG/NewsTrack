@@ -4,7 +4,6 @@ import clsx from "clsx";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -77,30 +76,9 @@ const SimpleHeader = ({ section, subsection }) => {
                 >
                   {subsection}
                 </Link>
-                <Typography
-                  component="span"
-                  className={classes.breadcrumbActive}
-                >
-                  {section}
-                </Typography>
               </Breadcrumbs>
             </Grid>
-            <Grid item xs={5} lg={6} component={Box} textAlign="right">
-              <Button
-                variant="contained"
-                size="small"
-                className={classes.buttonRoot}
-              >
-                New
-              </Button>
-              <Button
-                variant="contained"
-                size="small"
-                className={classes.buttonRoot}
-              >
-                Filters
-              </Button>
-            </Grid>
+            <Grid item xs={5} lg={6} component={Box} textAlign="right"></Grid>
           </Grid>
         </Container>
       </div>
