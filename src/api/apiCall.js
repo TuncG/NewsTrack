@@ -1,8 +1,8 @@
 import axiosRegular from "../axios";
 
-export async function makeApiCall(authData) {
+export async function makeApiCallEverything(parameters) {
   return axiosRegular
-    .get()
+    .get("https://newsapi.org/v2/everything?apiKey=ed8743d6c95941759e4053a4567380c8"+parameters)
     .then((response) => {
       return {
         success: true,
