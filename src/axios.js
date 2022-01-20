@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  method:"get",
+  method: "get",
   // baseURL: "https://newsapi.org/v2/everything?apiKey=ed8743d6c95941759e4053a4567380c8",
 });
 

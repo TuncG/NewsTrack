@@ -23,14 +23,16 @@ import Calendar from "views/admin/Calendar.js"; */
 import Palette from "@material-ui/icons/Palette"; */
 import House from "@material-ui/icons/House";
 import ListAlt from "@material-ui/icons/ListAlt";
+import WidgetsIcon from "@material-ui/icons/Widgets";
+import Palette from "@material-ui/icons/Palette";
 
 import PermMedia from "@material-ui/icons/PermMedia";
-import Widgets from "views/admin/Widgets.js";
-import WidgetsIcon from "@material-ui/icons/Widgets";
 import Microsoft from "pages/Microsoft";
 import Apple from "pages/Apple";
 import Facebook from "pages/Facebook";
 import Dashboard from "pages/DashboardPage";
+import Tesla from "pages/Tesla";
+import Google from "pages/Google";
 
 var routes = [
   {
@@ -70,13 +72,22 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/widgets",
-    name: "Widgets",
+    path: "/pages/Tesla",
+    name: "Tesla",
     icon: WidgetsIcon,
     iconColor: "Success",
-    component: Widgets,
+    component: Tesla,
     layout: "/admin",
   },
+  {
+    path: "/pages/Google",
+    name: "Google",
+    icon: Palette,
+    iconColor: "Error",
+    component: Google,
+    layout: "/admin",
+  },
+
   /* {
     collapse: true,
     name: "Tables",

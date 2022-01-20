@@ -49,7 +49,7 @@ const headCells = [
   { id: "actions", label: "Actions", width: "18%", disableSorting: true },
 ];
 
-const Apple = () => {
+const Facebook = () => {
   const classes = { ...useStyles() };
   const [alert, setAlert] = React.useState(null);
   const [newsArticles, setNewsArticles] = useState([]);
@@ -131,7 +131,7 @@ const Apple = () => {
 
   /* Fetch apple api */
   const fetchAppleNews = async function (search) {
-    const apiParams = "&q=Apple&from=2022-01-18&sortBy=popularity";
+    const apiParams = "&q=Google&from=2022-01-19&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
 
     if (callResult.success) {
@@ -149,7 +149,7 @@ const Apple = () => {
   return (
     <>
       {alert}
-      <SimpleHeader section="Apple page " subsection="Tables" />
+      <SimpleHeader section="Google page " subsection="Tables" />
       {/* Page content */}
       <Container
         maxWidth={false}
@@ -174,7 +174,7 @@ const Apple = () => {
                         variant="h2"
                         marginBottom="0!important"
                       >
-                        <Box component="span">Apple Article Table</Box>
+                        <Box component="span">Google Article Table</Box>
                       </Box>
                       <Box
                         component="p"
@@ -184,8 +184,8 @@ const Apple = () => {
                         lineHeight="1.7"
                         fontWeight="500"
                       >
-                        Find all the recent mentions of apple in recent articles
-                        and news headlines.
+                        Find all the recent mentions of Google in recent
+                        articles and news headlines.
                       </Box>
                     </Grid>
 
@@ -255,4 +255,4 @@ const Apple = () => {
   );
 };
 
-export default Apple;
+export default Facebook;
