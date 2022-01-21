@@ -87,14 +87,6 @@ var routes = [
     component: Google,
     layout: "/admin",
   },
-  /*  {
-    path: "/views/login",
-    name: "login",
-    icon: Dns,
-    iconColor: "Default",
-    component: Login,
-    layout: "/admin",
-  } */
 
   /* {
     collapse: true,
@@ -199,6 +191,5 @@ var routes = [
     name: "Plugins",
     icon: BubbleChart,
   }, */
-  ,
 ];
 export default routes;
