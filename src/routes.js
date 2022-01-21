@@ -33,6 +33,7 @@ import Facebook from "pages/Facebook";
 import Dashboard from "pages/DashboardPage";
 import Tesla from "pages/Tesla";
 import Google from "pages/Google";
+import Login from "views/auth/Login";
 
 var routes = [
   {
@@ -85,6 +86,14 @@ var routes = [
     icon: Palette,
     iconColor: "Error",
     component: Google,
+    layout: "/admin",
+  },
+  {
+    path: "/views/login",
+    name: "login",
+    icon: Dns,
+    iconColor: "Default",
+    component: Login,
     layout: "/admin",
   },
 

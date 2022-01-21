@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
@@ -27,8 +27,30 @@ const useStyles = makeStyles(componentStyles);
 const useStylesButtons = makeStyles(componentStylesButtons);
 
 function Login() {
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
+  let setInfo = false;
+
   const classes = { ...useStyles(), ...useStylesButtons() };
   const theme = useTheme();
+
+  useEffect(() => {}, [setInfo]);
+
+  const emailChangeHandler = (event) => {
+    setEnteredEmail(event.target.value);
+
+    console.log(enteredEmail, "email");
+  };
+
+  const passwordChangeHandler = (event) => {
+    setEnteredPassword(event.target.value);
+
+    console.log(enteredPassword, "password");
+  };
+
+  var content =
+    "Ensure your email is valid and your password is at least 6 characters long!";
+
   return (
     <>
       <AuthHeader
@@ -133,8 +155,11 @@ function Login() {
                 >
                   <FilledInput
                     autoComplete="off"
+                    required="true"
                     type="email"
                     placeholder="Email"
+                    value={enteredEmail}
+                    onChange={emailChangeHandler}
                     startAdornment={
                       <InputAdornment position="start">
                         <Email />
@@ -149,9 +174,12 @@ function Login() {
                   marginBottom="1rem!important"
                 >
                   <FilledInput
+                    required="true"
                     autoComplete="off"
                     type="password"
                     placeholder="Password"
+                    value={enteredPassword}
+                    onChange={passwordChangeHandler}
                     startAdornment={
                       <InputAdornment position="start">
                         <Lock />
@@ -175,14 +203,26 @@ function Login() {
                   marginBottom="1.5rem"
                 >
                   <Button
+                    type="submit"
                     variant="contained"
                     classes={{ root: classes.buttonContainedInfo }}
+                    onClick={() => {
+                      if (
+                        enteredEmail.includes("@") &&
+                        enteredPassword.trim().length > 6
+                      ) {
+                        setInfo = true;
+                      } else {
+                        setInfo = false;
+                      }
+                    }}
                   >
                     Sign in
                   </Button>
                 </Box>
               </CardContent>
             </Card>
+
             <Grid container component={Box} marginTop="1rem">
               <Grid item xs={6} component={Box} textAlign="left">
                 <a
