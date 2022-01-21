@@ -33,7 +33,6 @@ import Facebook from "pages/Facebook";
 import Dashboard from "pages/DashboardPage";
 import Tesla from "pages/Tesla";
 import Google from "pages/Google";
-import Login from "views/auth/Login";
 
 var routes = [
   {
@@ -88,14 +87,14 @@ var routes = [
     component: Google,
     layout: "/admin",
   },
-  {
+  /*  {
     path: "/views/login",
     name: "login",
     icon: Dns,
     iconColor: "Default",
     component: Login,
     layout: "/admin",
-  },
+  } */
 
   /* {
     collapse: true,
@@ -200,5 +199,6 @@ var routes = [
     name: "Plugins",
     icon: BubbleChart,
   }, */
+  ,
 ];
 export default routes;
