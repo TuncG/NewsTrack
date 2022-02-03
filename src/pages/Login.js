@@ -22,6 +22,7 @@ import Lock from "@material-ui/icons/Lock";
 import AuthHeader from "components/Headers/AuthHeader.js";
 import componentStyles from "assets/theme/views/auth/login.js";
 import componentStylesButtons from "assets/theme/components/button.js";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(componentStyles);
 const useStylesButtons = makeStyles(componentStylesButtons);
@@ -203,14 +204,16 @@ function Login() {
                   marginBottom="1.5rem"
                 >
                   <Button
-                    type="submit"
+                    type="button"
                     variant="contained"
                     classes={{ root: classes.buttonContainedInfo }}
                     onClick={() => {
+                      console.log("Here");
                       if (
                         enteredEmail.includes("@") &&
                         enteredPassword.trim().length > 6
                       ) {
+                        <Link to="/admin"> </Link>;
                         setInfo = true;
                       } else {
                         setInfo = false;

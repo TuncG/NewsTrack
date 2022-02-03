@@ -126,11 +126,11 @@ const Facebook = () => {
   useEffect(() => {
     document.title = "Products";
 
-    fetchAppleNews("");
+    fetchGoogleNews("");
   }, []);
 
-  /* Fetch apple api */
-  const fetchAppleNews = async function (search) {
+  /* Fetch Google api */
+  const fetchGoogleNews = async function (search) {
     const apiParams = "&q=Google&from=2022-01-19&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
 
