@@ -55,12 +55,12 @@ function Dashboard() {
         classes={{ root: classes.containerGraph }}
       >
         <Grid container>
-          <Grid item xs={12} xl={6}>
+          {/* <Grid item xs={12} xl={6}> To add later
             <CardSalesValueAlternative />
           </Grid>
           <Grid item xs={12} xl={6}>
             <CardSalesValueDots />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </>
