@@ -8,8 +8,8 @@ import Container from "@material-ui/core/Container";
 
 // core components
 import StatsHeader from "components/Headers/StatsHeader.js";
-import CardSalesValueAlternative from "components/Cards/Alternative/CardSalesValueAlternative.js";
-import CardSalesValueDots from "components/Cards/Charts/CardSalesValueDots.js";
+/* import CardSalesValueAlternative from "components/Cards/Alternative/CardSalesValueAlternative.js";
+import CardSalesValueDots from "components/Cards/Charts/CardSalesValueDots.js"; */
 import Grid from "@material-ui/core/Grid";
 
 /* import CardTeamMembers from "components/Cards/Dashboard/CardTeamMembers.js";
