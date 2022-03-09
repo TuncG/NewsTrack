@@ -131,7 +131,8 @@ const Microsoft = () => {
 
   /* Fetch apple api */
   const fetchAppleNews = async function (search) {
-    const apiParams = "&q=Microsoft&from=2022-01-18&sortBy=popularity";
+    var todayDate = new Date().toISOString().slice(0, 10);
+    const apiParams = "&q=Microsoft&from=" + todayDate + "&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
 
     if (callResult.success) {

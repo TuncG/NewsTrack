@@ -131,7 +131,8 @@ const Facebook = () => {
 
   /* Fetch Google api */
   const fetchGoogleNews = async function (search) {
-    const apiParams = "&q=Google&from=2022-01-19&sortBy=popularity";
+    var todayDate = new Date().toISOString().slice(0, 10);
+    const apiParams = "&q=Google&from=" + todayDate + "&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
 
     if (callResult.success) {

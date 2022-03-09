@@ -131,7 +131,8 @@ const Facebook = () => {
 
   /* Fetch apple api */
   const fetchAppleNews = async function (search) {
-    const apiParams = "&q=Tesla&from=2022-01-19&sortBy=popularity";
+    var todayDate = new Date().toISOString().slice(0, 10);
+    const apiParams = "&q=Tesla&from=" + todayDate + "&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
 
     if (callResult.success) {
