@@ -2,11 +2,9 @@ import axiosRegular from "../axios";
 
 export async function makeApiCallEverything(parameters) {
   return axiosRegular
-    .get(
-      "https://newsapi.org/v2/everything?apiKey=ed8743d6c95941759e4053a4567380c8" +
-        parameters
-    )
+    .get("http://newstrack.tuncgonel.com/news-api/getArticles.php" + parameters)
     .then((response) => {
+      console.log("the_response:", response.data);
       return {
         success: true,
         data: response.data,

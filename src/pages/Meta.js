@@ -49,7 +49,7 @@ const headCells = [
   { id: "actions", label: "Actions", width: "18%", disableSorting: true },
 ];
 
-const Facebook = () => {
+const Meta = () => {
   const classes = { ...useStyles() };
   const [alert, setAlert] = React.useState(null);
   const [newsArticles, setNewsArticles] = useState([]);
@@ -126,11 +126,11 @@ const Facebook = () => {
   useEffect(() => {
     document.title = "Products";
 
-    fetchFacebookNews("");
+    fetchNews("");
   }, []);
 
   /* Fetch Facebook api */
-  const fetchFacebookNews = async function (search) {
+  const fetchNews = async function (search) {
     var todayDate = new Date().toISOString().slice(0, 10);
     const apiParams = "&q=Facebook&from=" + todayDate + "&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
@@ -150,7 +150,7 @@ const Facebook = () => {
   return (
     <>
       {alert}
-      <SimpleHeader section="Facebook page " subsection="Tables" />
+      <SimpleHeader section="Meta page " subsection="Tables" />
       {/* Page content */}
       <Container
         maxWidth={false}
@@ -175,7 +175,7 @@ const Facebook = () => {
                         variant="h2"
                         marginBottom="0!important"
                       >
-                        <Box component="span">Facebook Article Table</Box>
+                        <Box component="span">Meta Article Table</Box>
                       </Box>
                       <Box
                         component="p"
@@ -185,8 +185,8 @@ const Facebook = () => {
                         lineHeight="1.7"
                         fontWeight="500"
                       >
-                        Find all the recent mentions of Facebook in recent
-                        articles and news headlines.
+                        Find all the recent mentions of Meta in recent articles
+                        and news headlines.
                       </Box>
                     </Grid>
 
@@ -256,4 +256,4 @@ const Facebook = () => {
   );
 };
 
-export default Facebook;
+export default Meta;

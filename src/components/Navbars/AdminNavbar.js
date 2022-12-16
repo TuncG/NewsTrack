@@ -14,7 +14,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 /* import UserDropdown from "components/Dropdowns/UserDropdown.js";
  */
 import componentStyles from "assets/theme/components/navbars/admin-navbar.js";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(componentStyles);
@@ -65,10 +65,10 @@ export default function AdminNavbar({ openSidebarResponsive }) {
                 <Link to="/pages/login">
                   {/*                 <UserDropdown />*/}
 
-                  <Button variant="contained" color="default">
+                  {/* <Button variant="contained" color="default">
                     {" "}
                     Login{" "}
-                  </Button>
+                  </Button> */}
                 </Link>
               </Box>
             </Box>

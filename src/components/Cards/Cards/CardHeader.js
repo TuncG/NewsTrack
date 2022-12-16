@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
 // @material-ui/icons components
 
 // core components
@@ -16,7 +17,8 @@ import componentStyles from "assets/theme/components/cards/cards/card-header.js"
 
 const useStyles = makeStyles(componentStyles);
 
-function CardHeaderComponent() {
+function CardHeaderComponent({ content }) {
+  console.log(content);
   const classes = useStyles();
   return (
     <>
@@ -35,7 +37,7 @@ function CardHeaderComponent() {
                   variant="h3"
                   marginBottom="0!important"
                 >
-                  Card title
+                  {content.title}
                 </Box>
               </Grid>
             </Grid>
@@ -51,14 +53,13 @@ function CardHeaderComponent() {
             fontSize="1rem"
             marginTop="0"
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-            non dolore est fuga nobis ipsum illum eligendi nemo iure repellat,
-            soluta, optio minus ut reiciendis voluptates enim impedit veritatis
-            officiis.
+            {content.description}
           </Box>
-          <Button variant="contained" color="primary">
-            Go somewhere
-          </Button>
+          <Link to={content.link}>
+            <Button variant="contained" color="primary">
+              Find out More
+            </Button>
+          </Link>
         </CardContent>
       </Card>
     </>

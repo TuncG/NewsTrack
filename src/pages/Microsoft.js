@@ -126,11 +126,11 @@ const Microsoft = () => {
   useEffect(() => {
     document.title = "Products";
 
-    fetchAppleNews("");
+    fetchNews("");
   }, []);
 
   /* Fetch apple api */
-  const fetchAppleNews = async function (search) {
+  const fetchNews = async function (search) {
     var todayDate = new Date().toISOString().slice(0, 10);
     const apiParams = "&q=Microsoft&from=" + todayDate + "&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);

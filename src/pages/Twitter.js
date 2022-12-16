@@ -49,7 +49,7 @@ const headCells = [
   { id: "actions", label: "Actions", width: "18%", disableSorting: true },
 ];
 
-const Facebook = () => {
+const Twitter = () => {
   const classes = { ...useStyles() };
   const [alert, setAlert] = React.useState(null);
   const [newsArticles, setNewsArticles] = useState([]);
@@ -132,7 +132,7 @@ const Facebook = () => {
   /* Fetch apple api */
   const fetchNews = async function (search) {
     var todayDate = new Date().toISOString().slice(0, 10);
-    const apiParams = "&q=Tesla&from=" + todayDate + "&sortBy=popularity";
+    const apiParams = "&q=Twitter&from=" + todayDate + "&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
 
     if (callResult.success) {
@@ -150,7 +150,7 @@ const Facebook = () => {
   return (
     <>
       {alert}
-      <SimpleHeader section="Tesla page " subsection="Tables" />
+      <SimpleHeader section="Twitter page " subsection="Tables" />
       {/* Page content */}
       <Container
         maxWidth={false}
@@ -175,7 +175,7 @@ const Facebook = () => {
                         variant="h2"
                         marginBottom="0!important"
                       >
-                        <Box component="span">Tesla Article Table</Box>
+                        <Box component="span">Twitter Article Table</Box>
                       </Box>
                       <Box
                         component="p"
@@ -185,8 +185,8 @@ const Facebook = () => {
                         lineHeight="1.7"
                         fontWeight="500"
                       >
-                        Find all the recent mentions of Tesla in recent articles
-                        and news headlines.
+                        Find all the recent mentions of Twitter in recent
+                        articles and news headlines.
                       </Box>
                     </Grid>
 
@@ -256,4 +256,4 @@ const Facebook = () => {
   );
 };
 
-export default Facebook;
+export default Twitter;

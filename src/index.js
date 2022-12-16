@@ -22,8 +22,6 @@ import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
 import Login from "pages/Login";
 
-console.log("here at index");
-
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -33,7 +31,7 @@ ReactDOM.render(
         <Route path="/pages/login" render={() => <Login />} />
         <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
         <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
-        <Redirect from="*" to="/admin" />
+        <Redirect from="*" to="/admin/pages/DashboardPage" />
       </Switch>
     </BrowserRouter>
   </ThemeProvider>,

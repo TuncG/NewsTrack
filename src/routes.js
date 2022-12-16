@@ -1,38 +1,22 @@
-// core components
-// admin pages
-// // // // // admin dashboards
-// // // // // admin tables
-/* import Tables from "views/admin/Tables/Tables.js";
-import Sortable from "views/admin/Tables/Sortable.js";
-import ReactBSTable from "views/admin/Tables/ReactBSTable.js";
-// // // // // admin maps
-import Google from "views/admin/Maps/Google.js";
-import Vector from "views/admin/Maps/Vector.js"; */
-// // // // // admin rest
-/* import Widgets from "views/admin/Widgets.js";
-import Charts from "views/admin/Charts.js";
-import Calendar from "views/admin/Calendar.js"; */
-
 // auth pages
 
 // @material-ui/icons components
 /* import BubbleChart from "@material-ui/icons/BubbleChart";
  */ import Dns from "@material-ui/icons/Dns";
-/* import Event from "@material-ui/icons/Event";
-/* import Map from "@material-ui/icons/Map";
-import Palette from "@material-ui/icons/Palette"; */
+
 import House from "@material-ui/icons/House";
 import ListAlt from "@material-ui/icons/ListAlt";
 import WidgetsIcon from "@material-ui/icons/Widgets";
 import Palette from "@material-ui/icons/Palette";
-
 import PermMedia from "@material-ui/icons/PermMedia";
 import Microsoft from "pages/Microsoft";
 import Apple from "pages/Apple";
-import Facebook from "pages/Facebook";
+import Meta from "pages/Meta";
 import Dashboard from "pages/DashboardPage";
 import Tesla from "pages/Tesla";
 import Google from "pages/Google";
+import Twitter from "pages/Twitter";
+import Build from "@material-ui/icons/Build";
 
 var routes = [
   {
@@ -58,17 +42,17 @@ var routes = [
   {
     path: "/pages/apple",
     name: "Apple",
-    icon: Dns,
+    icon: Build,
     iconColor: "Default",
     component: Apple,
     layout: "/admin",
   },
   {
-    path: "/pages/Facebook",
-    name: "Facebook",
+    path: "/pages/Meta",
+    name: "Meta",
     icon: ListAlt,
     iconColor: "ErrorLight",
-    component: Facebook,
+    component: Meta,
     layout: "/admin",
   },
   {
@@ -85,6 +69,14 @@ var routes = [
     icon: Palette,
     iconColor: "Error",
     component: Google,
+    layout: "/admin",
+  },
+  {
+    path: "/pages/Twitter",
+    name: "Twitter",
+    icon: Dns,
+    iconColor: "Error",
+    component: Twitter,
     layout: "/admin",
   },
 

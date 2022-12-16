@@ -21,6 +21,7 @@ import CardCreditDetails from "components/Cards/Dashboard/CardCreditDetails.js";
 import CardCredit from "components/Cards/Dashboard/CardCredit.js";
 import CardPageVisits from "components/Cards/Dashboard/CardPageVisits.js";
 import CardSocialTraffic from "components/Cards/Dashboard/CardSocialTraffic.js"; */
+import CardHeader from "components/Cards/Cards/CardHeader.js";
 
 import componentStyles from "assets/theme/views/admin/dashboard.js";
 import componentStylesCardDeck from "assets/theme/components/cards/card-deck.js";
@@ -31,10 +32,47 @@ const useStylesCardDeck = makeStyles(componentStylesCardDeck);
 
 function Dashboard() {
   const classes = { ...useStyles(), ...useStylesCardDeck() };
-  const content = {
+  const mainContent = {
     title: "Welcome to NewsTrack!",
     details:
-      "At NewsTrack we keep track of important information regarding the big tech compagnies, check out our links at the sidebar for more info.",
+      "At NewsTrack we keep track of recent news articles from various sources. Currently our selection is top tech compagnies such as Apple, Google, Microsoft, Amazon, Meta, and Tesla. You can also search for specific news articles by title or author. Theres much more to come in the future, we hope you enjoy our service! ",
+  };
+
+  const cardContent = {
+    microsoft: {
+      title: "Microsoft",
+      description: "Click here to see the latest news from Microsoft",
+      link: "Microsoft",
+    },
+
+    Meta: {
+      title: "Meta",
+      description: "Click here to see the latest news from Meta",
+      link: "Meta",
+    },
+
+    Google: {
+      title: "Google",
+      description: "Click here to see the latest news from Google",
+      link: "Google",
+    },
+
+    Apple: {
+      title: "Apple",
+      description: "Click here to see the latest news from Apple",
+      link: "Apple",
+    },
+
+    Tesla: {
+      title: "Tesla",
+      description: "Click here to see the latest news from Tesla",
+      link: "Tesla",
+    },
+    Twitter: {
+      title: "Twitter",
+      description: "Click here to see the latest news from Tesla",
+      link: "Twitter",
+    },
   };
   return (
     <>
@@ -46,21 +84,24 @@ function Dashboard() {
         marginTop="-6rem"
         classes={{ root: classes.containerRoot }}
       >
-        <CardHeaderAction content={content}></CardHeaderAction>
+        <CardHeaderAction content={mainContent}></CardHeaderAction>
       </Container>
       <Container
         maxWidth={false}
         component={Box}
         marginTop="3rem"
-        classes={{ root: classes.containerGraph }}
+        classes={{ root: classes.containerRoot }}
       >
-        <Grid container>
-          {/* <Grid item xs={12} xl={6}> To add later
-            <CardSalesValueAlternative />
-          </Grid>
-          <Grid item xs={12} xl={6}>
-            <CardSalesValueDots />
-          </Grid> */}
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+        >
+          {Object.keys(cardContent).map((keyName, i) => (
+            <Grid item xs={2} sm={4} md={4} key={i}>
+              <CardHeader content={cardContent[keyName]}></CardHeader>
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </>
