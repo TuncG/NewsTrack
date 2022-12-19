@@ -47,5 +47,5 @@ $newsapi = new NewsApi($apiKey);
 $all_articles = $newsapi->getEverything($query="Microsoft", $sources=null, $domains=null, $exclude_domains=null, $from, $to, $language=null, $sortBy,  $page_size="20", $page="1");
 
 $newsArray = array();
-$newsArray['articles']=$all_articles;
+$newsArray['articles']=$all_articles; 
 echo json_encode($newsArray);

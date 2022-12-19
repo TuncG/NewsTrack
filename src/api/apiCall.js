@@ -1,8 +1,11 @@
 import axiosRegular from "../axios";
-
+//http://newstrack.tuncgonel.com/news-api/getArticles.php
 export async function makeApiCallEverything(parameters) {
+  const apiUrl =
+    "http://api-newstrack.tuncgonel.com/news-api/getArticles.php?" + parameters;
+
   return axiosRegular
-    .get("http://newstrack.tuncgonel.com/news-api/getArticles.php" + parameters)
+    .get(apiUrl)
     .then((response) => {
       console.log("the_response:", response.data);
       return {
