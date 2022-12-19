@@ -136,8 +136,8 @@ const Apple = () => {
     let callResult = await makeApiCallEverything(apiParams);
 
     if (callResult.success) {
-      console.log("getresult", callResult.data);
-      setNewsArticles(callResult.data.articles);
+      console.log("getresult Apple 2", callResult.data.articles.articles);
+      setNewsArticles(callResult.data.articles.articles);
     } else {
       /*  setErrorModalOpen({
         open: true,
