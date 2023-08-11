@@ -4,11 +4,9 @@ export async function makeApiCallEverything(parameters) {
   const apiUrl =
     "https://api-newstrack.tuncgonel.com/news-api/getArticles.php?" +
     parameters;
-
   return axiosRegular
     .get(apiUrl)
     .then((response) => {
-      console.log("the_response:", response.data);
       return {
         success: true,
         data: response.data,

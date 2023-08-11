@@ -131,12 +131,14 @@ const Twitter = () => {
 
   /* Fetch apple api */
   const fetchNews = async function (search) {
-    var todayDate = new Date().toISOString().slice(0, 10);
-    const apiParams = "&q=Twitter&from=" + todayDate + "&sortBy=popularity";
+    var todayDate = new Date();
+    todayDate.setDate(todayDate.getDate() - 1);
+    var yesterdayDate = todayDate.toISOString().slice(0, 10);
+
+    const apiParams = "&q=Twitter&from=" + yesterdayDate + "&sortBy=popularity";
     let callResult = await makeApiCallEverything(apiParams);
 
     if (callResult.success) {
-      console.log("getresult 2", callResult.data.articles.articles);
       setNewsArticles(callResult.data.articles.articles);
     } else {
       /*  setErrorModalOpen({
@@ -193,7 +195,7 @@ const Twitter = () => {
                     <Grid item xs="auto" md={12} style={{ display: "flex" }}>
                       <OutlinedInput
                         type="search"
-                        placeholder="Search alert"
+                        placeholder="Search Articles"
                         onChange={handleSearch}
                       />
                     </Grid>

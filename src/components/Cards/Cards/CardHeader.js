@@ -18,7 +18,6 @@ import componentStyles from "assets/theme/components/cards/cards/card-header.js"
 const useStyles = makeStyles(componentStyles);
 
 function CardHeaderComponent({ content }) {
-  console.log(content);
   const classes = useStyles();
   return (
     <>
